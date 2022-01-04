@@ -1,11 +1,14 @@
 .box {
-    height: 20px;
-    width: 20px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
     margin: 1px;
+    flex: 1 1 0%;
 }
 .container {
     display: flex;
+    width: 960px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
 }
