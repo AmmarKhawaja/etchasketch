@@ -6,9 +6,16 @@
     flex: 1 1 0%;
 }
 .container {
-    display: flex;
     width: 960px;
+    height: 960px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
+}
+.row {
+    width: 960px;
+    display: flex;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
 }

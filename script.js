@@ -10,13 +10,17 @@ row.setAttribute("id","row");
 row.classList.add("row");
 row.appendChild(box);
 container.appendChild(row)
-
+var cropy = row.cloneNode(true);
+container.appendChild(cropy)
 
 function createBoxes(length) {
     for (let i = 0; i < length; i++) {
         var copy = box.cloneNode(true);
-        container.appendChild(copy);
-        
+        row.appendChild(copy);
+    }
+    for (let i = 0; i < length; i++) {
+        var cropy = row.cloneNode(true);
+        container.appendChild(cropy)
     }
     
 }
