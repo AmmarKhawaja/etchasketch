@@ -15,7 +15,6 @@ row.classList.add("row");
 
 function createBoxes(length) {
     for (let i = 0; i < length; i++) {
-        console.log(length);
         var copy = box.cloneNode(true);
         row.appendChild(copy);
     }
@@ -23,7 +22,14 @@ function createBoxes(length) {
         var cropy = row.cloneNode(true);
         container.appendChild(cropy)
     }
-    
+    const rows = document.querySelectorAll("#row");   
+    rows.forEach((elem) => {
+        console.log(elem.childElementCount)
+        while(elem.childElementCount > length) {
+            elem.removeChild(elem.firstChild);
+        }
+    })
+    console.log(row.childElementCount)
 }
 function addBoxListeners() {
     const a = document.querySelectorAll("#box");
@@ -34,10 +40,8 @@ function addBoxListeners() {
         })
     })
 }
-function buttonClicked() {
-    
-    const rows = document.querySelectorAll("#row");
-    
+function buttonClicked() {  
+    const rows = document.querySelectorAll("#row");   
     rows.forEach((elem) => {
         elem.remove();
     })
