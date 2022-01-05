@@ -11,6 +11,7 @@ row.classList.add("row");
 
 function createBoxes(length) {
     for (let i = 0; i < length; i++) {
+        box.style.backgroundColor = ("white");
         var copy = box.cloneNode(true);
         row.appendChild(copy);
     }
