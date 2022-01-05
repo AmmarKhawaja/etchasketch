@@ -8,10 +8,6 @@ container.appendChild(box);
 const row = document.createElement("div");
 row.setAttribute("id","row");
 row.classList.add("row");
-//row.appendChild(box);
-//container.appendChild(row)
-//var cropy = row.cloneNode(true);
-//container.appendChild(cropy)
 
 function createBoxes(length) {
     for (let i = 0; i < length; i++) {
@@ -22,7 +18,8 @@ function createBoxes(length) {
         var cropy = row.cloneNode(true);
         container.appendChild(cropy)
     }
-    const rows = document.querySelectorAll("#row");   
+    const rows = document.querySelectorAll("#row");  
+    //Code below fixed the error (deletes boxes when theres too many)
     rows.forEach((elem) => {
         console.log(elem.childElementCount)
         while(elem.childElementCount > length) {
@@ -41,6 +38,7 @@ function addBoxListeners() {
     })
 }
 function buttonClicked() {  
+    //Deletes boxes
     const rows = document.querySelectorAll("#row");   
     rows.forEach((elem) => {
         elem.remove();
